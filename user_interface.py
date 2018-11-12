@@ -33,6 +33,9 @@ class UserInterface:
         # set a callback to handle when the window is closed
         self.root.wm_title("Brendan's PhotoBooth")
         self.root.wm_protocol("WM_DELETE_WINDOW", self.OnClose)
+    
+    def StartGui(self):
+        self.root.mainloop()
         
     def DisplayVideo(self):
         # DISCLAIMER:

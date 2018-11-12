@@ -3,17 +3,26 @@ from __future__ import print_function
 from user_interface import UserInterface
 from imutils.video import VideoStream
 #import time
-from audio import AudioStream
+#from audio import AudioStream
+from transmission import VideoServer, VideoClient, GetSingleVideoFrame
 
-# initialize the video stream (use default camera by setting src to 0)
-videoStream = VideoStream(src=0).start()
-#time.sleep(2.0)
-audioStream = AudioStream()
+CONNECTION_IP = '10.0.0.138'
+DEFAULT_CAM = 0
+
+
+#incomingVideoStream = VideoListener(CONNECTION_IP)
+incomingAudioStream = None # not implemented
+outgoingVideoStream = VideoStream(src=DEFAULT_CAM).start()
+#outgoingAudioStream = AudioStream()
+#get = GetSingleVideoFrame
+#get.GetFrame(get,outgoingVideoStream)
+#videoServer = VideoServer(CONNECTION_IP, outgoingVideoStream)
+#audioSender = None # not implemented
 
 # start the app
-pba = UserInterface(videoStream, audioStream)
-pba.root.mainloop()
-
+#userInterface = UserInterface(incomingVideoStream, incomingAudioStream)
+#userInterface = UserInterface(outgoingVideoStream, incomingAudioStream) # troubleshooting
+#userInterface.StartGui();
 #this might be better
 #https://stackoverflow.com/questions/14140495/how-to-capture-a-video-and-audio-in-python-from-a-camera-or-webcam
 
