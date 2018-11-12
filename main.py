@@ -21,7 +21,7 @@ outgoingVideoStream = VideoStream(src=DEFAULT_CAM).start()
 
 # start the app
 #userInterface = UserInterface(incomingVideoStream, incomingAudioStream)
-#userInterface = UserInterface(outgoingVideoStream, incomingAudioStream) # troubleshooting
+userInterface = UserInterface(outgoingVideoStream, incomingAudioStream) # troubleshooting
 #userInterface.StartGui();
 #this might be better
 #https://stackoverflow.com/questions/14140495/how-to-capture-a-video-and-audio-in-python-from-a-camera-or-webcam
